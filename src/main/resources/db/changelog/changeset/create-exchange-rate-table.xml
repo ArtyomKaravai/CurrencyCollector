@@ -15,6 +15,7 @@
             </column>
 
             <column name="rate" type="numeric(12, 6)">
+                <constraints nullable="false"/>
             </column>
 
             <column name="destination_currency_code" type="varchar(3)">
