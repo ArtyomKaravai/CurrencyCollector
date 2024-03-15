@@ -14,7 +14,7 @@
                              referencedColumnNames="iso_code"/>
             </column>
 
-            <column name="rate" type="money">
+            <column name="rate" type="numeric(12, 6)">
             </column>
 
             <column name="destination_currency_code" type="varchar(3)">
