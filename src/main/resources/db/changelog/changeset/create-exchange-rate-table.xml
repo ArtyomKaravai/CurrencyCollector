@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="artyom" id="1">
+        <createTable tableName="exchange_rate">
+
+            <column name="base_currency_code" type="varchar(3)">
+                <constraints primaryKey="true"
+                             foreignKeyName="fk_base_currency_code"
+                             referencedTableName="currency"
+                             referencedColumnNames="iso_code"/>
+            </column>
+
+            <column name="rate" type="money">
+            </column>
+
+            <column name="destination_currency_code" type="varchar(3)">
+                <constraints primaryKey="true"
+                             foreignKeyName="fk_destination_currency_code"
+                             referencedTableName="currency"
+                             referencedColumnNames="iso_code"/>
+            </column>
+
+            <column name="rate_date" type="timestamp">
+            </column>
+
+            <column name="update_date" type="timestamp">
+            </column>
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

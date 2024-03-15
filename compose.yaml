@@ -1,0 +1,9 @@
+services:
+  db:
+    container_name: db
+    image: postgres:13.2
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+    ports:
+      - "9090:5432"
